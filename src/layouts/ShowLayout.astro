@@ -1,0 +1,63 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+---
+<BaseLayout>
+    <section class="showPage">
+        <div class="showImage">
+            <slot name="showImage" />
+        </div>
+        <div class="showTitle">
+            <slot name="showTitle" />
+        </div>
+        <div class="showCopy">
+            <slot />
+        </div>
+    </section>
+    <section class="showCalendar">
+        <h3>Upcoming Events</h3>
+        <slot name="showCalendar">
+            There are no upcoming events for this show. Check back as we get closer to the show for more information!
+        </slot>
+    </section>
+</BaseLayout>
+<style>
+    .showPage {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+    }
+    .showImage {
+        grid-area: image;
+        text-align: center;
+    }
+    .showTitle {
+        grid-area: title;
+        text-align: center;
+    }
+    .showCopy {
+        grid-area: copy;
+    }
+    .showCalendar {
+        padding-top: 2em;
+        text-align: center;
+    }
+    h3 {
+        color: var(--primary);
+        text-align: center;
+    }
+
+    @media screen and (min-width: 870px) {
+        .showPage {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr;
+            grid-template-areas: 'image title'
+                                 'image copy';
+            gap: var(--gap);
+        }
+        .showImage {
+            padding-right: 2em;
+            max-width: 450px
+        }
+    }
+</style>

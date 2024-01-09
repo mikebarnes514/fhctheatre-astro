@@ -1,0 +1,116 @@
+---
+---
+<input type="checkbox" id="menuToggle" class="menuButton" />
+<label for="menuToggle" class="menuIcon"><span class="navIcon" /></label>
+<nav class="navMenu">
+    <a id="nav-home" href="/">Home</a>
+    <a id="nav-announcements" href="/announcements">Announcements</a>
+    <a id="nav-improv" href="/improv">Improv Central</a>
+    <a id="nav-play" href="/play">Fall Play</a>
+    <a id="nav-musical" href="/musical">Spring Musical</a>
+    <a id="nav-tickets" href="/tickets">Ticket Info</a>
+</nav>
+<script is:inline>
+    function resetActiveLink() {
+        const allLinks = document.querySelectorAll('.navMenu a');
+        allLinks.forEach((link) => {
+          link.removeClass('active');
+        });
+    }
+</script>
+<style>
+.menuIcon {
+    cursor: pointer;
+    display: block;
+    padding: 1em;
+    user-select: none;
+}
+.menuIcon .navIcon {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 18px;
+}
+.menuIcon .navIcon:before,
+.menuIcon .navIcon:after {
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+}
+.menuIcon .navIcon:before {
+    top: 5px;
+}
+.menuIcon .navIcon:after {
+    top: -5px;
+}
+.menuButton {
+    display: none;
+}
+.menuButton:checked ~ .navMenu {
+    max-height: 500px;
+}
+.menuButton:checked ~ .menuIcon .navIcon {
+    background: transparent;
+}
+.menuButton:checked ~ .menuIcon .navIcon:before {
+    transform: rotate(-45deg);
+}
+.menuButton:checked ~ .menuIcon .navIcon:after {
+    transform: rotate(45deg);
+}
+.menuButton:checked ~ .menuIcon:not(.steps) .navIcon:before,
+.menuButton:checked ~ .menuIcon:not(.steps) .navIcon:after {
+    top: 0;
+}
+.navMenu {
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    color: var(--siteTitleTextColor);
+    font-family: var(--textFont);
+    font-size: var(--h5);
+}
+.navMenu a {
+    flex-grow: 1;
+    margin: 8px;
+    padding: 0.5em;
+    padding-right: 1em;
+}
+.navMenu a:hover {
+    margin: 4px;
+    border: var(--marqueeHoverBorder);
+    border-radius: 8px;
+}
+.navMenu .active {
+    margin: 4px;
+    border: var(--marqueeBorder);
+    border-radius: var(--marqueeBorderRadius);
+}
+@media screen and (min-width: 870px) {
+    .menuIcon {
+        display: none;
+    }
+    .navMenu {
+        display: flex;
+        flex-direction: row;
+        gap: var(--gap);
+        justify-content: center;
+        background-color: var(--siteTitleBackgroundColor);
+        color: var(--siteTitleTextColor);
+        text-align: center;
+        max-height: none;
+        overflow: hidden;
+    }
+}
+</style>

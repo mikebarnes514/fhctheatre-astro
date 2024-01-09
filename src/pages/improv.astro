@@ -1,0 +1,21 @@
+---
+import ShowLayout from "../layouts/ShowLayout.astro";
+
+---
+
+<ShowLayout>
+    <img slot="showImage" src="/images/show-improv.jpg" alt="Improv Central" height="250px" />
+    <h2 slot="showTitle">Improv Central</h2>
+    <!--<iframe slot="showCalendar" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showTitle=0&showPrint=0&showCalendars=0&showTabs=0&showTz=0&src=MDgyMTEwMzgyNjE3N2FhNGEwZDhmZTY3NDMxZDRiYzZmODcwMjc2MjhmYWExOThjNGZmNjdlMjJmOTc5OTE2ZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23D81B60" style={{borderWidth:0}} width="800" height="600" frame-border="0" scrolling="no" title="improvCalendar" />-->
+    <section>
+        <div>
+            Since its founding over a decade ago, Improv Central has been the most spontaneous club in school! Twice a year, 
+            Improv Central puts on a show for their community in which the skits are completely unplanned and entirely made 
+            up on-the-spot. Their shows cater to the audience by involving the audience, and anyone who witnesses their 
+            performances can guarantee a night of fun and laughter.
+        </div>
+    </section>
+</ShowLayout>
+<script is:inline>
+    document.getElementById('nav-improv').classList.add('active');
+</script>

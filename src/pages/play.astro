@@ -1,0 +1,23 @@
+---
+import ShowLayout from "../layouts/ShowLayout.astro";
+
+---
+
+<ShowLayout>
+    <img slot="showImage" src="/images/show-savage.jpg" alt="The Curious Savage" />
+    <h2 slot="showTitle">The Curious Savage</h2>
+    <div>
+        <p>
+            The story of Ethel P. Savage, an eccentric woman who, after her husband's passing, receives 10 
+            million dollars! Now living in a santorium along with five psychiatric patients, Ethel finds 
+            herself learning more about real kindness in this comedic play.
+        </p>
+        <p>
+            Thank you to everyone who came out to the show! We hope you enjoyed the story of Ethel P. Savage and 
+            the other residents of <i>The Cloisters</i>. We can't wait to share another story with you next year!
+        </p>
+    </div>
+</ShowLayout>
+<script is:inline>
+    document.getElementById('nav-play').classList.add('active');
+</script>

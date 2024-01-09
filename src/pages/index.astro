@@ -1,0 +1,26 @@
+---
+import ShowLineup from "../components/ShowLineup.astro";
+import StandardLayout from "../layouts/StandardLayout.astro";
+
+---
+<StandardLayout>
+	<main>
+		<h2 class="center">Welcome to the Home of FHC Theatre</h1>
+		<div class="mainImage" class="center">
+			<img src="/images/play-2023.jpg" alt="FHC Theatre" width="400" />
+		</div>
+		<h3 class="center">"Artistic excellence combined with educational growth"</h2>
+		<p>
+			Thank you for stopping by to check us out. If you are a current FHC student, you will be able
+			to easily access pertinent information regarding upcoming auditions and performances. If you 
+			are a parent, alumni, or supporter, we hope that you are able to quickly find the information
+			you need to keep informed about upcoming theatre events at FHC.
+		</p>
+		<ShowLineup />
+	</main>
+</StandardLayout>
+<style>
+	.mainImage {
+		text-align: center;
+	}
+</style>

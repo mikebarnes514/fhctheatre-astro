@@ -1,0 +1,61 @@
+---
+import StandardLayout from "../layouts/StandardLayout.astro";
+
+---
+
+<StandardLayout>
+    <section>
+        <h2 class="center">Tickets</h2>
+        <img src="/images/fhfac.jpeg" alt="Forest Hills Fine Arts Center" width="400px" />
+        <div class="pageCopy">
+            <p>
+                All productions of Improv Central and the fall play take the stage at the FHC auditorium.
+                Tickets can be purchased in advance by students during their lunch hour or at the door the
+                night of the performance.
+            </p>
+            <p>
+                The spring musical is performed at the <a href="https://fhfineartscenter.com/" target="_blank">Forest Hills Fine Arts Center</a>.
+                Tickets may be purchased in advance through their website, over the phone, or in person at the Box Office
+                during normal business hours. If available, tickets may also be purchased at the Box Office on the night of the show.
+            </p>
+            <p>
+                To purchase tickets at the Forest Hills Fine Arts Center, visit <a href="https://fhfac.ludus.com/index.php" target="_blank">FAC Tickets</a>.
+            </p>
+        </div>
+    </section>
+</StandardLayout>
+<script is:inline>
+    document.getElementById('nav-tickets').classList.add('active');
+</script>
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        align-items: center;
+    }
+    @media screen and (min-width: 870px) {
+        section {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr;
+            grid-template-areas: 'image title'
+                                 'image copy';
+            gap: var(--gap);
+        }
+        h1 {
+            grid-area: title;
+        }
+        img {
+            grid-area: image;
+            max-width: 450px;
+            padding-right: 2em;
+        }
+        .showCopy {
+            grid-area: copy;
+        }
+        .showCopy p {
+
+        }
+    }
+</style>

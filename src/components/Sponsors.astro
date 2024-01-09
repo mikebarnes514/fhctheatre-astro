@@ -1,0 +1,41 @@
+---
+---
+<section class="sponsors">
+    <h3>Thank you to our sponsors</h3>
+    <div class="sponsorList">
+    <a href="https://www.instagram.com/topthis_foresthills/" target="_blank">
+        <img src="/images/top-this-logo.png" alt="Top This" width="150" />
+    </a>
+    <a href="https://www.impactfitnesswellness.com/" target="_blank">
+        <img src="/images/impact-logo.png" alt="Impact Fitness & Wellness" width="150" />
+    </a>
+    <a href="https://jtspizza.com/" target="_blank">
+        <img src="/images/jts-logo.jpg" alt="JT's Pizza & Spirits" width="150" />
+    </a>
+</section>
+<style>
+    .sponsors {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: var(--gap);
+    }
+    .sponsorList {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: var(--gap);
+        width: 100%;
+    }
+    .sponsors h3 {
+        text-align: center;
+        color: var(--primary);
+    }
+
+    @media screen and (min-width: 870px) {
+        .sponsorList {
+            flex-direction: row;
+        }
+    }
+</style>

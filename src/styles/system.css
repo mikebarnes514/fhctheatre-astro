@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Raleway:wght@300;400;600;700&display=swap");
+
+@font-face {
+  font-family: "Dischouse";
+  src: url("/fonts/DISCHOUSE.ttf");
+}
+
+:root {
+  /* Base colors */
+  --white: #ffffff;
+  --red: #880000;
+  --orange: #b46a1f;
+  --yellow: #f4c300;
+  --green: #007041;
+  --blue: #346094;
+  --purple: #a88fac;
+  --brown: #65503c;
+  --black: #000000;
+  --gray: #545759;
+  --lightYellow: #ffe88d;
+  --lightGreen: #cce3d9;
+  --lightBlue: #7ca4dd;
+  --lightGray: #ddddde;
+  --darkBlue: #1b2d45;
+  --darkGray: #1e1f20;
+
+  /* Theme colors */
+  --primary: var(--green);
+  --secondary: var(--darkGray);
+  --accent: var(--white);
+
+  /* Element colors */
+  --textColor: var(--black);
+  --headingColor: var(--darkBlue);
+  --backgroundColor: var(--white);
+  --siteTitleBackgroundColor: var(--green);
+  --siteTitleTextColor: var(--white);
+  --marqueeColor: var(--yellow);
+  --marqueeHoverColor: var(--lightYellow);
+
+  /* Typography */
+  --headingFont: "Raleway", sans-serif;
+  --textFont: "Merriweather", serif;
+  --siteTitleFont: "Dischouse", sans-serif;
+
+  --fontSize: 16px;
+  --siteTitleFontSize: 3.2rem;
+  --h1: 2.4rem;
+  --h2: 1.9rem;
+  --h3: 1.5rem;
+  --h4: 1.25rem;
+  --h5: 1rem;
+  --smallText: 0.8rem;
+  --tinyText: 0.64rem;
+
+  /* Elements */
+  --marqueeBorder: dotted 4px var(--marqueeColor);
+  --marqueeHoverBorder: dotted 4px var(--marqueeHoverColor);
+  --marqueeBorderRadius: 8px;
+  --gap: 0.5em;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 1rem;
+  color: var(--headingColor);
+  font-family: var(--headingFont);
+  font-weight: 400;
+  line-height: 1.3;
+}
+h1 {
+  font-size: var(--h1);
+}
+h2 {
+  font-size: var(--h1);
+}
+h3 {
+  font-size: var(--h2);
+}
+h4 {
+  font-size: var(--h4);
+}
+h5 {
+  font-size: var(--h5);
+}
+
+/* Text Elements */
+b,
+strong {
+  font-weight: 600;
+}
+small,
+.text-small {
+  font-size: var(--smallText);
+}
+.text-tiny {
+  font-size: var(--tinyText);
+}
+.center {
+  text-align: center;
+}
+section {
+  margin: 1em 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+p + p {
+  margin-top: 1em;
+}
+p a,
+blockquote a {
+  color: var(--textColor);
+  text-decoration: none;
+  border-bottom: solid 1px var(--primary);
+}
