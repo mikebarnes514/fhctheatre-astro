@@ -13,6 +13,7 @@ export async function onRequest(context: {
   const cookie = request.headers.get("cookie") || "";
   const cookieKeyValue = await getCookieKeyValue(env.PORTAL_PASSWORD);
 
+  console.log({ cookie, pathname, password: env.PORTAL_PASSWORD });
   if (
     cookie.includes(cookieKeyValue) ||
     !FHC_RESTRICTED_PATHS.includes(pathname) ||
