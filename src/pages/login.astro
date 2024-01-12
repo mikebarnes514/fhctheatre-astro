@@ -10,25 +10,10 @@ import StandardLayout from "../layouts/StandardLayout.astro";
             you received in your parent information packet. If you cannot locate the password, you can contact Jessi
             Dykstra to receive it again.
         </p>
-        <form>
+        <form method="POST" action="/api/login">
             <input type="hidden" name="redirect" value="/parents" />
             <input type="password" name="password" placeholder="Enter password" aria-label="Password" autocomplete="current-password" required autofocus />
-            <button id="login">Log In</button>
+            <button type="submit">Log In</button>
         </form>
     </section>
 </StandardLayout>
-<script>
-    const loginButton = document.getElementById('login');
-
-    if (loginButton) {
-        loginButton.addEventListener('click', (e) => {
-            fetch('/api/login', { method: "POST" }).then((res) => {
-                console.log(res);
-            }).catch((error) => {
-                console.warn("login failed");
-                console.error(error);
-            });
-            e.preventDefault();
-        });
-    }
-</script>
