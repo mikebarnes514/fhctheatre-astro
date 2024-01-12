@@ -1,7 +1,4 @@
 import type { APIRoute } from "astro";
-import { SignJWT } from "jose";
-import { nanoid } from "nanoid";
-import { FHC_COOKIE_KEY } from "../../authentication/constants";
 import { getCookieKeyValue, sha256 } from "../../authentication/utils";
 import { FHC_COOKIE_MAX_AGE_IN_SECONDS } from "../../authentication/constants";
 
@@ -15,10 +12,15 @@ export const POST: APIRoute = async (context) => {
   const fhcPassword = await sha256(import.meta.env.PORTAL_PASSWORD);
   const redirectRoute = redirect.toString() || "/";
 
+  console.log({
+    password: import.meta.env.PORTAL_PASSWORD,
+    redirectRoute,
+  });
   if (encodedPassword === fhcPassword) {
     const cookieValue = await getCookieKeyValue(
       import.meta.env.PORTAL_PASSWORD ?? "",
     );
+
     return new Response("", {
       status: 302,
       headers: {
