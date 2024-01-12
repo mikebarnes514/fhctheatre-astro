@@ -1,3 +1,0 @@
-export const FHC_COOKIE_KEY = "FHC_THEATRE_AUTHORIZATION_KEY";
-export const FHC_COOKIE_MAX_AGE_IN_SECONDS = 60;
-export const FHC_RESTRICTED_PATHS = ["/parents"];
