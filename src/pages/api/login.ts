@@ -32,7 +32,7 @@ export const POST: APIRoute = async (context) => {
       status: 302,
       headers: {
         "Cache-Control": "no-cache",
-        Location: `${redirectRoute}/?error=1`,
+        Location: "/login",
       },
     });
   }
