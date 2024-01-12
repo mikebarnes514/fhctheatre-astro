@@ -5,7 +5,9 @@ import { FHC_COOKIE_KEY } from "../../authentication/constants";
 import { getCookieKeyValue, sha256 } from "../../authentication/utils";
 import { FHC_COOKIE_MAX_AGE_IN_SECONDS } from "../../authentication/constants";
 
-export const post: APIRoute = async (context) => {
+export const prerender = false;
+
+export const POST: APIRoute = async (context) => {
   const { request } = context;
   const body = await request.formData();
   const { password, redirect } = Object.fromEntries(body);
