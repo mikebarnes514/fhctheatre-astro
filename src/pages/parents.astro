@@ -7,6 +7,7 @@ const prerender = false;
 const hashed_value = await sha256(import.meta.env.PORTAL_PASSWORD);
 const cookie_value = Astro.cookies.get(FHC_COOKIE_KEY)?.value;
 
+console.log({hashed_value, cookie_value});
 if (cookie_value !== hashed_value) {
     return Astro.redirect('/login');
 }
