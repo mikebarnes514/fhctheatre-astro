@@ -1,0 +1,51 @@
+---
+import StandardLayout from "../layouts/StandardLayout.astro";
+import BigAnnouncement from "../components/BigAnnouncement";
+---
+
+<StandardLayout>
+    <section class="loginPage">
+        <BigAnnouncement copy="Access to this page is restricted to parents of theatre cast and crew. Please log in using the password \
+                               you received in your parent information packet. If you cannot locate the password, you can contact Jessi \
+                               Dykstra to receive it again." />
+        <form method="POST" action="/api/login">
+            <input type="hidden" name="redirect" value="/parents" />
+            <input type="password" name="password" placeholder="Enter password" aria-label="Password" autocomplete="current-password" required autofocus />
+            <button type="submit">Log In</button>
+        </form>
+    </section>
+</StandardLayout>
+<style>
+    .loginPage {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5em;
+        gap: 2em;
+    }
+    .loginPage form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+    }
+    .loginPage input[type="password"] {
+        font-size: var(--h3);
+        padding: 0.5em;
+        border-radius: 4px;
+    }
+    .loginPage button {
+        background-color: var(--primary);
+        width: 200px;
+        height: 48px;
+        border: 1px solid var(--gray);
+        border-radius: 4px;
+        font-size: var(--h3);
+    }
+
+    @media screen and (min-width: 870px) {
+        .loginPage {
+            padding: 4em;
+            gap: 4em;
+        }
+    }
+</style>

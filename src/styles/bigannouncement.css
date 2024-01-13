@@ -1,0 +1,24 @@
+.announcementOuter {
+  display: grid;
+  padding: 2em;
+  background-color: var(--red);
+  border-radius: 16px;
+}
+.announcementInner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border: var(--marqueeBorder);
+  border-radius: var(--marqueeBorderRadius);
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+.announcementTitle {
+  color: var(--white);
+  font-size: var(--h2);
+  text-align: center;
+}
+.announcementCopy {
+  color: var(--white);
+  text-align: center;
+}
