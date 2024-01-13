@@ -12,10 +12,6 @@ export const POST: APIRoute = async (context) => {
   const fhcPassword = await sha256(import.meta.env.PORTAL_PASSWORD);
   const redirectRoute = redirect.toString() || "/";
 
-  console.log({
-    password: import.meta.env.PORTAL_PASSWORD,
-    redirectRoute,
-  });
   if (encodedPassword === fhcPassword) {
     const cookieValue = await getCookieKeyValue(
       import.meta.env.PORTAL_PASSWORD ?? "",
