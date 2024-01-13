@@ -1,9 +1,10 @@
 ---
+export const prerender = false;
+
 import StandardLayout from "../layouts/StandardLayout.astro";
 import { FHC_COOKIE_KEY } from "../authentication/constants";
 import { sha256 } from "../authentication/utils";
 
-const prerender = false;
 const hashed_value = await sha256(import.meta.env.PORTAL_PASSWORD);
 const cookie_value = Astro.cookies.get(FHC_COOKIE_KEY)?.value;
 
