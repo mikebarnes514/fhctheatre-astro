@@ -8,6 +8,6 @@ export default defineConfig({
   output: "hybrid",
   adapter: cloudflare({
     mode: "directory",
-    imageService: "noop",
+    functionPerRoute: true,
   }),
 });
