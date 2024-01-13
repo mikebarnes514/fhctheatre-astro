@@ -1,11 +1,27 @@
 ---
+import BigAnnouncement from "../components/BigAnnouncement.astro";
 import ShowLineup from "../components/ShowLineup.astro";
 import StandardLayout from "../layouts/StandardLayout.astro";
-
 ---
 <StandardLayout>
-	<main>
+	<section>
 		<h2 class="center">Welcome to the Home of FHC Theatre</h1>
+		<BigAnnouncement  title="2024 Merchandise Sale">
+			<Fragment slot="copy">
+				<p>
+					Announcing the 2024 Theatre spirit sale! The Theatre Advisory Council is selling 
+			    	apparel and accessories featuring the new FHC Theatre logo designed by Jacob Barnes!
+				</p>
+				<p>
+					The store is open until <span style="font-style: italic; font-weight: 600; color: var(--lightYellow)">11:59pm on February 5, 2024</span> so get your orders in!
+					All merchandise will be printed and delivered to the school around the beginning of March.
+				</p>
+				<div style="display: flex; justify-content: space-evenly; padding-top: 1em">
+					<a href="https://fhc-theatre.itemorder.com/shop/home/" class="announcementLink">Spirit Store Website</a>
+					<a href="/files/FHCTheatreMerchFlyer.pdf" class="announcementLink">Spirit Store Flyer</a>
+				</div>
+			</Fragment>
+		</BigAnnouncement>
 		<div class="mainImage" class="center">
 			<img src="/images/play-2023.jpg" alt="FHC Theatre" width="400" />
 		</div>
@@ -17,10 +33,15 @@ import StandardLayout from "../layouts/StandardLayout.astro";
 			you need to keep informed about upcoming theatre events at FHC.
 		</p>
 		<ShowLineup />
-	</main>
+	</section>
 </StandardLayout>
 <style>
 	.mainImage {
 		text-align: center;
+	}
+	.announcementLink {
+		color: var(--yellow);
+		font-size: var(--h3);
+		border-bottom: none;
 	}
 </style>
