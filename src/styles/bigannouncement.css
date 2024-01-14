@@ -3,6 +3,7 @@
   padding: 2em;
   background-color: var(--red);
   border-radius: 16px;
+  margin: 2em 0;
 }
 .announcementInner {
   display: grid;
