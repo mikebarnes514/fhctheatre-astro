@@ -190,7 +190,10 @@ import StandardLayout from '../layouts/StandardLayout.astro';
     .castMember:nth-of-type(even) {
       background-color: var(--lightGreen);
     }
-    .character,
+    .character {
+      max-width: 50%;
+      text-align: start;
+    }
     .actor {
       max-width: 50%;
       text-align: end;
