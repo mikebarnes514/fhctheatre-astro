@@ -1,26 +1,40 @@
 ---
-import ShowLayout from "../layouts/ShowLayout.astro";
-
+import ShowLayout from '../layouts/ShowLayout.astro';
 ---
 
 <ShowLayout>
-    <img slot="showImage" src="/images/show-spellingbee.png" alt="The 25th Annual Putnam County Spelling Bee" width="250px" />
-    <h2 slot="showTitle">The 25th Annual Putnam County Spelling Bee</h2>
-    <iframe slot="showCalendar" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showTitle=0&showPrint=0&showCalendars=0&showTabs=0&showTz=0&src=Mjg2MDUxYWM5NDYzMjdlYjM0MGUzMjNjNmVkOWMzYjE3YmQ1ZjQ1MmJiYTdmMGMyMmJiMjBjZGJhN2JlMTU0YUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F6BF26" style={{borderWidth:0}} width="800" height="600" frame-border="0" scrolling="no" title="musicalCalendar"/>
-    <div>
-        Grab a D-I-C-T-I-O-N-A-R-Y and welcome to Spelling Bee! This heartfelt Tony-Award winning musical follows 
-        a group of wonderfully unique and impassioned adolescents as they compete for the bee championship. 
-        The 25th Annual Putnam County Spelling Bee is a joyful night of comedy and quirk that celebrates the pursuit 
-        of victory and the gift of being true to oneself.
-    </div>
+  <img slot="showImage" src="/images/show-spellingbee.png" alt="The 25th Annual Putnam County Spelling Bee" width="250px" />
+  <h2 slot="showTitle">The 25th Annual Putnam County Spelling Bee</h2>
+  <Fragment slot="showCalendar">
+    <p>
+      <strong
+        ><i
+          >Show calendar is subject to change. For the most accurate schedule and individual daily call times, read the
+          <a href="https://docs.google.com/document/d/1DNkKFJItveJ5k5--c9jeFiG7jYQrHa14INK3peF34lU/edit?usp=sharing" target="_blank">Spelling Bee Show Schedule</a>.
+        </i></strong
+      >
+    </p>
+    <iframe
+      src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showTitle=0&showPrint=0&showCalendars=0&showTabs=0&showTz=0&src=Mjg2MDUxYWM5NDYzMjdlYjM0MGUzMjNjNmVkOWMzYjE3YmQ1ZjQ1MmJiYTdmMGMyMmJiMjBjZGJhN2JlMTU0YUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F6BF26"
+      style={{ borderWidth: 0 }}
+      width="1080"
+      height="600"
+      frame-border="0"
+      scrolling="no"
+      title="musicalCalendar"></iframe>
+  </Fragment>
+  <div>
+    Grab a D-I-C-T-I-O-N-A-R-Y and welcome to Spelling Bee! This heartfelt Tony-Award winning musical follows a group of wonderfully unique and impassioned adolescents as they compete for the bee
+    championship. The 25th Annual Putnam County Spelling Bee is a joyful night of comedy and quirk that celebrates the pursuit of victory and the gift of being true to oneself.
+  </div>
 </ShowLayout>
 <script is:inline>
-    document.getElementById('nav-musical').classList.add('active');
+  document.getElementById('nav-musical').classList.add('active');
 </script>
 <style>
-    @media screen and (max-width: 869px) {
-        iframe {
-            width: 100%;
-        }
+  @media screen and (max-width: 869px) {
+    iframe {
+      width: 100%;
     }
+  }
 </style>
