@@ -1,23 +1,87 @@
 ---
 export const prerender = false;
 
-import StandardLayout from "../layouts/StandardLayout.astro";
-import { FHC_COOKIE_KEY } from "../authentication/constants";
-import { sha256 } from "../authentication/utils";
+import StandardLayout from '../layouts/StandardLayout.astro';
+import { FHC_COOKIE_KEY } from '../authentication/constants';
+import { sha256 } from '../authentication/utils';
 
 const hashed_value = await sha256(import.meta.env.PORTAL_PASSWORD);
 const cookie_value = Astro.cookies.get(FHC_COOKIE_KEY)?.value;
 
 if (cookie_value !== hashed_value) {
-    return Astro.redirect('/login');
+  return Astro.redirect('/login');
 }
 ---
+
 <StandardLayout>
-    <section>
-        <h2 class="center">Parent Portal</h2>
-        <p>Look for more information to come as we get closer to the show!</p>
-    </section>
+  <section>
+    <h2 class="center">Parent Portal</h2>
+    <p>
+      Welcome to the 2024 Spring Musical, <i>The 25th Annual Putnam County Spelling Bee</i>! On this page you will find links to volunteer opportunities and other information, as well as copies of all
+      documents that have been shared with students and families. If you have any questions that are not covered in these documents, or if a document or link is missing, please <a
+        href="mailto:jdykstra@fhps.net">contact Jessi Dykstra</a
+      > for more information.
+    </p>
+    <div class="documentList">
+      <a class="document" href="/files/Master%202024%20Spring%20Musical%20Parent%20Packet.pdf" target="_blank">
+        <span class="documentIcon fa-solid fa-file-pdf fa-3x"></span>
+        <div class="documentName">Master Information Packet</div>
+      </a>
+      <a class="document" href="/files/FHC%20Theatre%20Corporate%20Sponsorship%20Form.pdf" target="_blank">
+        <span class="documentIcon fa-solid fa-file-pdf fa-3x"></span>
+        <div class="documentName">Corporate Sponsorship Form</div>
+      </a>
+      <a class="document" href="/files/FHC%20Theatre%20Family%20Sponsorship%20Form.pdf" target="_blank">
+        <span class="documentIcon fa-solid fa-file-pdf fa-3x"></span>
+        <div class="documentName">Family Sponsorship Form</div>
+      </a>
+      <a class="document" href="/files/2024%20FHC%20Spring%20Musical%Parent%Information%20Form.pdf" target="_blank">
+        <span class="documentIcon fa-solid fa-file-pdf fa-3x"></span>
+        <div class="documentName">Parent Information Form</div>
+      </a>
+      <a class="document" href="https://www.signupgenius.com/go/20F0F4DA8AB2EA3FD0-47232150-volunteer" target="_blank">
+        <span class="documentIcon fa-solid fa-file-lines fa-3x"></span>
+        <div class="documentName">Volunteer Signup</div>
+      </a>
+      <a class="document" href="https://forms.gle/xo5UmEFcw7fU7pLPA" target="_blank">
+        <div class="documentIcon"><span class="fa-solid fa-file-lines fa-3x"></span></div>
+        <div class="documentName">Merchandise Pre-order Form</div>
+      </a>
+    </div>
+  </section>
 </StandardLayout>
 <script is:inline>
-    document.getElementById('nav-parents').classList.add('active');
+  document.getElementById('nav-parents').classList.add('active');
 </script>
+<style>
+  .documentList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0;
+    background-color: var(--lightGreen);
+    border-radius: 1.25em;
+    margin-top: 2em;
+  }
+  .document {
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: var(--h4);
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 1em;
+    text-align: center;
+    width: 275px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 870px) {
+    .documentList {
+      flex-direction: row;
+    }
+  }
+</style>
