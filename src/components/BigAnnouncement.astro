@@ -1,9 +1,10 @@
 ---
 const { title } = Astro.props;
 ---
+
 <div class="announcementOuter">
   <div class="announcementInner">
-    { title && <h3 class="announcementTitle">{title}</h3> }
+    {title && <h3 class="announcementTitle">{title}</h3>}
     <div class="announcementCopy">
       <slot name="copy" />
     </div>

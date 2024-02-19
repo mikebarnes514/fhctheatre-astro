@@ -1,41 +1,63 @@
 ---
+
 ---
+
 <section class="sponsors">
-    <h3>Thank you to our sponsors</h3>
-    <div class="sponsorList">
+  <h3>Thank you to our sponsors</h3>
+  <div class="sponsorList">
     <a href="https://www.instagram.com/topthis_foresthills/" target="_blank">
-        <img src="/images/top-this-logo.png" alt="Top This" width="150" />
+      <img src="/images/top-this-logo.png" alt="Top This" width="150" />
     </a>
     <a href="https://www.impactfitnesswellness.com/" target="_blank">
-        <img src="/images/impact-logo.png" alt="Impact Fitness & Wellness" width="150" />
+      <img src="/images/impact-logo.png" alt="Impact Fitness & Wellness" width="150" />
     </a>
     <a href="https://jtspizza.com/" target="_blank">
-        <img src="/images/jts-logo.jpg" alt="JT's Pizza & Spirits" width="150" />
+      <img src="/images/jts-logo.jpg" alt="JT's Pizza & Spirits" width="150" />
     </a>
+  </div>
+  <h3>And thank you to our theatre families for their support</h3>
+  <div class="sponsorList">
+    <ul>
+      <li>The Barnes Family</li>
+      <li>The Cameron Family</li>
+      <li>The Colpean Family</li>
+      <li>The Fletcher Family</li>
+      <li>The Harsevoort Family</li>
+      <li>The Lower Family</li>
+      <li>The Monterusso Family</li>
+      <li>The Mossner Family</li>
+      <li>The Smith Family</li>
+      <li>The Tyrrell Family</li>
+      <li>The Vorel Family</li>
+    </ul>
+  </div>
 </section>
 <style>
-    .sponsors {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        gap: var(--gap);
-    }
-    .sponsorList {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        gap: var(--gap);
-        width: 100%;
-    }
-    .sponsors h3 {
-        text-align: center;
-        color: var(--primary);
-    }
+  .sponsors {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: var(--gap);
+  }
+  .sponsorList {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: var(--gap);
+    width: 100%;
+  }
+  .sponsors h3 {
+    text-align: center;
+    color: var(--primary);
+  }
 
-    @media screen and (min-width: 870px) {
-        .sponsorList {
-            flex-direction: row;
-        }
+  @media screen and (min-width: 870px) {
+    .sponsorList {
+      flex-direction: row;
     }
+    .sponsorList ul {
+      columns: 2;
+    }
+  }
 </style>
