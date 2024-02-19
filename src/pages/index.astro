@@ -7,9 +7,28 @@ import StandardLayout from '../layouts/StandardLayout.astro';
 <StandardLayout>
   <section>
     <h2 class="center">Welcome to the Home of FHC Theatre</h2>
-    <div class="mainImage" class="center">
-      <img src="/images/play-2023.jpg" alt="FHC Theatre" width="400" />
+    <div class="showAnnouncement">
+      <div class="showImage">
+        <img src="/images/rat-2024-poster.jpg" alt="Random Acts of Talent 2024" width="300" />
+      </div>
+      <div class="announcement">
+        <div class="showTitle">Random Acts of Talent 2024</div>
+        <div class="showDate">Saturday, February 24 7:00pm</div>
+        <div class="showInfo">
+          Join us for a night of music, laughter, and amazing talent as FHC puts on Random Acts of Talent 2024! Tickets are available during lunches at school or at the door. Come support all of the
+          talented people of FHC and see who gets voted top act!
+        </div>
+      </div>
     </div>
+    <BigAnnouncement title="Announcing: Tony Night!">
+      <div slot="copy">
+        Our annual celebration of all things that make the theatre program at FHC amazing (aka all of the people!) will take place on <strong><i>Friday, April 26 at 7:00pm</i></strong>. Stay tuned for
+        more details to come, but make sure to mark your calendars for this fun and special night!
+      </div>
+    </BigAnnouncement>
+    <!--<div class="mainImage" class="center">
+      <img src="/images/play-2023.jpg" alt="FHC Theatre" width="400" />
+    </div>-->
     <h3 class="center">"Artistic excellence combined with educational growth"</h3>
     <p>
       Thank you for stopping by to check us out. If you are a current FHC student, you will be able to easily access pertinent information regarding upcoming auditions and performances. If you are a
@@ -21,5 +40,25 @@ import StandardLayout from '../layouts/StandardLayout.astro';
 <style>
   .mainImage {
     text-align: center;
+  }
+  .showAnnouncement {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+    padding: 2em 0;
+  }
+  .announcement {
+    text-align: center;
+    margin-left: 1em;
+  }
+  .showTitle {
+    font-size: var(--h3);
+    font-style: var(--headingFont);
+  }
+  .showDate {
+    font-size: var(--h4);
+  }
+  .showInfo {
+    padding: 1em 0;
   }
 </style>
