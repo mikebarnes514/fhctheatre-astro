@@ -8,7 +8,7 @@ import StandardLayout from '../layouts/StandardLayout.astro';
   <section>
     <h2 class="center">Welcome to the Home of FHC Theatre</h2>
     <div class="showAnnouncement">
-      <div class="showImage">
+      <div class="showImage center">
         <img src="/images/rat-2024-poster.jpg" alt="Random Acts of Talent 2024" width="300" />
       </div>
       <div class="announcement">
@@ -26,9 +26,9 @@ import StandardLayout from '../layouts/StandardLayout.astro';
         more details to come, but make sure to mark your calendars for this fun and special night!
       </div>
     </BigAnnouncement>
-    <!--<div class="mainImage" class="center">
+    <!-- <div class="mainImage" class="center">
       <img src="/images/play-2023.jpg" alt="FHC Theatre" width="400" />
-    </div>-->
+    </div> -->
     <h3 class="center">"Artistic excellence combined with educational growth"</h3>
     <p>
       Thank you for stopping by to check us out. If you are a current FHC student, you will be able to easily access pertinent information regarding upcoming auditions and performances. If you are a
@@ -43,9 +43,9 @@ import StandardLayout from '../layouts/StandardLayout.astro';
   }
   .showAnnouncement {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     justify-content: center;
-    padding: 2em 0;
+    padding: 1em 0;
   }
   .announcement {
     text-align: center;
@@ -60,5 +60,11 @@ import StandardLayout from '../layouts/StandardLayout.astro';
   }
   .showInfo {
     padding: 1em 0;
+  }
+  @media screen and (min-width: 870px) {
+    .showAnnouncement {
+      grid-template-columns: auto 1fr;
+      padding: 2em 0;
+    }
   }
 </style>
