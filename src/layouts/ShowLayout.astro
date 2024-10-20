@@ -11,7 +11,13 @@ import BaseLayout from './BaseLayout.astro';
       <slot name="showTitle" />
     </div>
     <div class="showCopy">
-      <slot />
+      <div class="showDates">
+        <slot name="showDates" />
+      </div>
+      <slot name="showCopy" />
+      <div class="showTickets">
+        <slot name="showTickets" />
+      </div>
     </div>
   </section>
 </BaseLayout>
@@ -31,6 +37,19 @@ import BaseLayout from './BaseLayout.astro';
   }
   .showCopy {
     grid-area: copy;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .showDates {
+    font-size: var(--h4);
+    font-weight: 600;
+    text-align: center;
+  }
+  .showTickets {
+    font-size: var(--h4);
+    font-style: italic;
+    text-align: center;
   }
   .showCalendar {
     padding-top: 2em;

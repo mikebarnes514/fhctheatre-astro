@@ -1,38 +1,54 @@
 ---
+import Tickets from '../pages/tickets.astro';
 
+const shows = [
+  {
+    title: 'Improv Central Fall Edition',
+    dates: 'November 2 @ 7:03 PM',
+    image: '/images/improv-fall-2024-logo.png',
+    link: '/improv',
+  },
+  {
+    title: 'Alice in Wonderland',
+    dates: 'November 14 - 16 @ 7:00 PM, November 16 @ 3:00 PM',
+    image: '/images/alice-logo.png',
+    link: '/play',
+  },
+  {
+    title: 'Random Acts of Talent 25',
+    dates: ' January 25 @ 7:00 PM',
+    image: '/images/show-rat-new.jpg',
+    link: '/rat',
+  },
+  {
+    title: 'Peter Pan',
+    dates: 'March 21-23 @ 7:00 PM; March 23 @ 3:00 PM',
+    image: '/images/peterpan-logo.png',
+    link: '/musical',
+  },
+  {
+    title: 'Improv Central Spring Edition',
+    dates: 'April 27 @ 7:33 PM',
+    image: '/images/improv-spring-square.jpg',
+    link: '/improv',
+  },
+];
 ---
 
 <section class="showLineup">
-  <h3>Show Lineup</h3>
-  <div class="imageList">
-    <div class="imageHolder">
-      <a href="/improv">
-        <img src="/images/show-improv-fall-new.jpg" alt="Improv Central" height="300" />
-      </a>
-      <div class="caption">September 30</div>
-    </div>
-    <div class="imageHolder">
-      <a href="/play">
-        <img src="/images/show-savage-new.jpg" alt="The Curious Savage" height="300" />
-      </a>
-      <div class="caption">November 9 - 11</div>
-    </div>
-    <div class="imageHolder">
-      <img src="/images/show-rat-new.jpg" alt="Random Acts of Talent" height="300" />
-      <div class="caption">February 24</div>
-    </div>
-    <div class="imageHolder">
-      <a href="/musical">
-        <img src="/images/show-spellingbee-new.jpg" alt="The 25th Annual Putnam County Spelling Bee" height="300" />
-      </a>
-      <div class="caption">March 21 - 23</div>
-    </div>
-    <div class="imageHolder">
-      <a href="/improv">
-        <img src="/images/improv-spring-square.jpg" alt="Improv Central - Spring Edition" height="300" />
-        <div class="caption">April 27</div>
-      </a>
-    </div>
+  <h3>2024 Show Lineup</h3>
+  <div class="showList">
+    {
+      shows.map((show) => (
+        <a href={show.link} class="show">
+          <img src={show.image} alt={show.title} height="150px" />
+          <div class="showInfo">
+            <div class="showName">{show.title}</div>
+            <div class="showDates">{show.dates}</div>
+          </div>
+        </a>
+      ))
+    }
   </div>
   <style>
     .showLineup {
@@ -41,6 +57,40 @@
     h3 {
       color: var(--primary);
       text-align: center;
+    }
+    .showList {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .show {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      padding: 1em;
+      justify-content: start;
+      align-items: center;
+      width: 100%;
+    }
+    .show img {
+      width: 225px;
+    }
+    .showInfo {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+    .showName {
+      font-size: var(--h4);
+      font-weight: 600;
+      color: var(--black);
+      align-content: end;
+    }
+    .showDates {
+      align-content: center;
+      justify-self: center;
+      color: var(--primary);
     }
     .imageList {
       display: flex;
@@ -78,6 +128,14 @@
     @media screen and (min-width: 870px) {
       .imageList {
         flex-direction: row;
+      }
+      .show {
+        display: grid;
+        grid-template-columns: auto 1fr;
+      }
+      .showDates {
+        align-content: start;
+        justify-self: start;
       }
     }
   </style>

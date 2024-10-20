@@ -3,15 +3,14 @@ import ShowLayout from '../layouts/ShowLayout.astro';
 ---
 
 <ShowLayout>
-  <img slot="showImage" src="/images/show-improv-spring.jpg" alt="Improv Central" height="250px" />
-  <h2 slot="showTitle">Improv Central</h2>
-  <section>
-    <div>
-      Since its founding over a decade ago, Improv Central has been the most spontaneous club in school! Twice a year, Improv Central puts on a show for their community in which the skits are
-      completely unplanned and entirely made up on-the-spot. Their shows cater to the audience by involving the audience, and anyone who witnesses their performances can guarantee a night of fun and
-      laughter.
-    </div>
-  </section>
+  <img slot="showImage" src="/images/improv-fall-2024-logo.png" alt="Improv Central" width="300px" />
+  <h2 slot="showTitle">Improv Central Fall Edition</h2>
+  <div slot="showCopy">
+    Since its founding over a decade ago, Improv Central has been the most spontaneous club in school! Twice a year, Improv Central puts on a show for their community in which the skits are completely
+    unplanned and entirely made up on-the-spot. Their shows cater to the audience by involving the audience, and anyone who witnesses their performances can guarantee a night of fun and laughter.
+  </div>
+  <div slot="showDates">Saturday, November 2, 2024 7:03pm</div>
+  <div slot="showTickets">Tickets $10 for adults, $5 for students<br />Available at lunch or at the door</div>
 </ShowLayout>
 <script is:inline>
   document.getElementById('nav-improv').classList.add('active');
