@@ -1,14 +1,18 @@
 ---
 import ShowLayout from '../layouts/ShowLayout.astro';
+
+const defaultCopy =
+  "Each spring, our theatre department explodes with color and song in our captivating musical production! This year's show promises to be a crowd-pleaser, filled with unforgettable melodies, dynamic dance numbers, and a talented cast of student performers. Whether it's a classic tale or a brand new story, our production guarantees an evening of laughter, heartwarming moments, and pure theatrical magic. Don't miss your chance to be a part of the excitement!";
 ---
 
 <ShowLayout>
-  <img slot="showImage" src="/images/musical-2024.jpg" alt="Spring Musical" width="300px" />
-  <h2 slot="showTitle">Spring Musical</h2>
-  <div>
-    Each spring, our theatre department explodes with color and song in our captivating musical production! This year's show promises to be a crowd-pleaser, filled with unforgettable melodies, dynamic
-    dance numbers, and a talented cast of student performers. Whether it's a classic tale or a brand new story, our production guarantees an evening of laughter, heartwarming moments, and pure
-    theatrical magic. Don't miss your chance to be a part of the excitement!
+  <img slot="showImage" src="/images/peterpan-logo.png" alt="Spring Musical" width="300px" />
+  <h2 slot="showTitle">Peter Pan</h2>
+  <div slot="showDates">March 21 - 23, 2025 @ 7:00 PM, Maarch 23 @ 3:00 PM</div>
+  <div slot="showCopy">
+    Soar away to Neverland with FHC Theatre’s dazzling production of Peter Pan. Join Wendy, Michael, and John on a magical adventure filled with pirates, fairies, and a boy who never grows up.
+    Experience the wonder of flight, the thrill of a sword fight, and the timeless message of believing in yourself. With soaring melodies, captivating choreography, and a cast of talented performers,
+    this musical is sure to enchant audiences of all ages. Don't miss your chance to fly away to Neverland!
   </div>
 </ShowLayout>
 <script is:inline>
