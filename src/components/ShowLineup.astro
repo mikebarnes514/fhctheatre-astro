@@ -66,11 +66,12 @@ const shows = [
       margin: 0 auto;
     }
     .show {
-      display: grid;
-      grid-template-columns: auto 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 1em;
       padding: 1em;
       justify-content: start;
+      align-items: center;
       width: 100%;
     }
     .show img {
@@ -87,7 +88,8 @@ const shows = [
       align-content: end;
     }
     .showDates {
-      align-content: start;
+      align-content: center;
+      justify-self: center;
       color: var(--primary);
     }
     .imageList {
@@ -126,6 +128,14 @@ const shows = [
     @media screen and (min-width: 870px) {
       .imageList {
         flex-direction: row;
+      }
+      .show {
+        display: grid;
+        grid-template-columns: auto 1fr;
+      }
+      .showDates {
+        align-content: start;
+        justify-self: start;
       }
     }
   </style>
