@@ -1,0 +1,102 @@
+---
+import StandardLayout from '../layouts/StandardLayout.astro';
+---
+
+<StandardLayout>
+  <section>
+    <h2 class="center">Forms</h2>
+    <p>
+      On this page you will find links to volunteer opportunities and other information, as well as copies of all documents that have been shared with students and families. If you have any questions
+      that are not covered in these documents, or if a document or link is missing, please <a href="mailto:jdykstra@fhps.net">contact Jessi Dykstra</a> for more information.
+    </p>
+    <div class="documentList">
+      <a class="document" href="/files/FHCTheatre-CodeOfConduct.pdf" target="_blank">
+        <span class="documentIcon fa-solid fa-file-pdf fa-3x"></span>
+        <div class="documentName">Student Code of Conduct</div>
+      </a>
+      <a class="document" href="/files/FHCTheatre-CorporateSponsor-24-25.pdf" target="_blank">
+        <span class="documentIcon fa-solid fa-file-pdf fa-3x"></span>
+        <div class="documentName">Corporate Sponsorship Form</div>
+      </a>
+      <a class="document" href="/files/FHCTheatre-FamilySponsor-24-25.pdf" target="_blank">
+        <span class="documentIcon fa-solid fa-file-pdf fa-3x"></span>
+        <div class="documentName">Family Sponsorship Form</div>
+      </a>
+      <a class="document" href="https://www.signupgenius.com/go/20F0F4DA8AB2EA3FD0-52630947-volunteer" target="_blank">
+        <span class="documentIcon fa-solid fa-file-lines fa-3x"></span>
+        <div class="documentName">Volunteer Signup</div>
+      </a>
+      <!-- <a class="document" href="https://forms.gle/xo5UmEFcw7fU7pLPA" target="_blank">
+        <div class="documentIcon"><span class="fa-solid fa-file-lines fa-3x"></span></div>
+        <div class="documentName">Merchandise Pre-order Form</div>
+      </a> -->
+    </div>
+    <h2 class="center">Show Media</h2>
+    <div class="imageList">
+      <a class="image" href="/media/2024-Improv-Fall-Logo.png" target="_blank">
+        <img src="/media/2024-Improv-Fall-Logo.png" alt="Improv Central Fall Edition Logo" />
+      </a>
+      <a class="image" href="/media/2024-Improv-Fall-Poster.jpg" target="_blank">
+        <img src="/media/2024-Improv-Fall-Poster.jpg" alt="Improv Central Fall Edition Poster" />
+      </a>
+      <a class="image" href="/media/2024-Play-Alice-Logo.png" target="_blank">
+        <img src="/media/2024-Play-Alice-Logo.png" alt="Alice in Wonderland Logo" />
+      </a>
+      <a class="image" href="/media/FHC-Theatre-Banner-Logo.png" target="_blank">
+        <img src="/media/FHC-Theatre-Banner-Logo.png" alt="FHC Theatre Banner Logo" />
+      </a>
+    </div>
+  </section>
+</StandardLayout>
+<script is:inline>
+  document.getElementById('nav-forms').classList.add('active');
+</script>
+<style>
+  .documentList,
+  .imageList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0;
+    background-color: var(--lightGreen);
+    border-radius: 1.25em;
+    margin-top: 2em;
+  }
+  .document {
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: var(--h4);
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 1em;
+    text-align: center;
+    width: 275px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .image {
+    background-color: var(--white);
+    color: var(--primary);
+    font-size: var(--h4);
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 1em;
+    text-align: center;
+    width: 275px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 870px) {
+    .documentList,
+    .imageList {
+      flex-direction: row;
+    }
+  }
+</style>
