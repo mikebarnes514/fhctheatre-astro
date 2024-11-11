@@ -5,30 +5,35 @@ const shows = [
   {
     title: 'Improv Central Fall Edition',
     dates: 'November 2 @ 7:03 PM',
+    location: 'FHC Auditorium',
     image: '/images/improv-fall-2024-logo.png',
     link: '/improv',
   },
   {
     title: 'Alice in Wonderland',
     dates: 'November 14 - 16 @ 7:00 PM, November 16 @ 3:00 PM',
+    location: 'FHC Auditorium',
     image: '/images/alice-logo.png',
     link: '/play',
   },
   {
     title: 'Random Acts of Talent 25',
     dates: ' January 25 @ 7:00 PM',
+    location: 'FH Fine Arts Center',
     image: '/images/show-rat-new.jpg',
     link: '/rat',
   },
   {
     title: 'Peter Pan',
     dates: 'March 21-23 @ 7:00 PM; March 23 @ 3:00 PM',
+    location: 'FHC Fine Arts Center',
     image: '/images/peterpan-logo.png',
     link: '/musical',
   },
   {
     title: 'Improv Central Spring Edition',
     dates: 'April 27 @ 7:33 PM',
+    location: 'FHC Auditorium',
     image: '/images/improv-spring-square.jpg',
     link: '/improv',
   },
@@ -45,6 +50,7 @@ const shows = [
           <div class="showInfo">
             <div class="showName">{show.title}</div>
             <div class="showDates">{show.dates}</div>
+            <div class="showLocation">{show.location}</div>
           </div>
         </a>
       ))
@@ -87,7 +93,8 @@ const shows = [
       color: var(--black);
       align-content: end;
     }
-    .showDates {
+    .showDates,
+    .showLocation {
       align-content: center;
       justify-self: center;
       color: var(--primary);
@@ -133,7 +140,8 @@ const shows = [
         display: grid;
         grid-template-columns: auto 1fr;
       }
-      .showDates {
+      .showDates,
+      .showLocation {
         align-content: start;
         justify-self: start;
       }
