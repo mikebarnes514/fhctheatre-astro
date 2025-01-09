@@ -7,18 +7,21 @@ import StandardLayout from '../layouts/StandardLayout.astro';
 <StandardLayout>
   <section>
     <h2 class="center">Welcome to the Home of FHC Theatre</h2>
-    <div class="mainImage" class="center">
-      <img src="/media/2024-Play-Alice-Logo.png" alt="FHC Theatre Fall Play - Alice in Wonderland" width="600" />
+    <div class="showAnnouncement">
+      <div class="mainImage" class="center">
+        <img src="/images/rat-2025-logo.jpg" alt="FHC Theatre - Random Acts of Talent 25" width="400" />
+      </div>
+      <div class="announcement">
+        <h3 class="showTitle">Random Acts of Talent '25</h3>
+        <p class="showDate">Saturday, January 18, 2025 @ 7:00 PM<br />Forest Hills Fine Arts Center</p>
+        <p class="showInfo">
+          Join us for the 25th annual Random Acts of Talent show! This year's show will feature a variety of acts from students across all grades competing for fame and prizes! Tickets are $5 for
+          students and $10 and can be purchased during lunch or at the door. Don't miss this exciting event!
+        </p>
+      </div>
     </div>
-    <h3 class="center">It's Show Week for Alice In Wonderland!</h3>
-    <p>
-      Join us for a whimsical adventure down the rabbit hole! FHC Theatre proudly presents Alice in Wonderland, a timeless classic filled with quirky characters, magical creatures, and unexpected
-      twists. Follow Alice as she tumbles into a fantastical world filled with talking animals, a Mad Hatter's tea party, and a Queen who's obsessed with croquet. With stunning costumes, imaginative
-      sets, and talented young actors, this production is sure to delight audiences of all ages. Don't miss your chance to step into the Looking Glass!
-    </p>
-    <p><a href="/play">Visit the Fall Play page</a> for more information and ticket prices!</p>
+    <ShowLineup />
   </section>
-  <ShowLineup />
 </StandardLayout>
 <style>
   .mainImage {
@@ -35,7 +38,7 @@ import StandardLayout from '../layouts/StandardLayout.astro';
     margin-left: 1em;
   }
   .showTitle {
-    font-size: var(--h3);
+    font-size: var(--h2);
     font-style: var(--headingFont);
   }
   .showDate {
