@@ -9,50 +9,50 @@ import StandardLayout from '../layouts/StandardLayout.astro';
     <h2 class="center">Welcome to the Home of FHC Theatre</h2>
     <div class="showAnnouncement">
       <div class="mainImage" class="center">
-        <img src="/images/musical-2025-front.jpg" alt="FHC Theatre Presents Peter Pan" width="300" />
+        <img src="/images/improv-central-logo.jpg" alt="FHC Theatre Presents Improv Central" width="300" />
       </div>
       <div class="announcement">
-        <h3 class="showTitle">FHC Theatre Presents Peter Pan!</h3>
-        <p class="showDate">March 20 - 22, 2025 @ 7:00 PM, March 22 @ 3:00 PM<br />Forest Hills Fine Arts Center</p>
+        <h3 class="showTitle">FHC Theatre Presents Improv Central!</h3>
+        <p class="showDate">September 27, 2025 @ 7:33 PM<br />FHC Auditorium</p>
         <p class="showInfo">
-          Soar away to Neverland with FHC Theatre’s dazzling production of Peter Pan. Join Wendy, Michael, and John on a magical adventure filled with pirates, fairies, and a boy who never grows up.
-          Experience the wonder of flight, the thrill of a sword fight, and the timeless message of believing in yourself. With soaring melodies, captivating choreography, and a cast of talented
-          performers, this musical is sure to enchant audiences of all ages. Don't miss your chance to fly away to Neverland!<br /><br />
-          Tickets are on sale now and can be purchased at the Forest Hills Fine Arts Center box office or online at <a href="https://fhfac.ludus.com/index.php">fhfac.ludus.com</a>.
+          It's the bee's knees, the cat's meow, the absolute berries! Improv Central is throwing the most swell party this side of West Egg, and you're invited! Our improvisers are ready to Charleston
+          their way through your wildest suggestions, creating scenes straight from the Jazz Age. Think you can stump our performers? Shout out a scenario – maybe a flapper trying to hide her secret
+          identity, or a bootlegger's delivery gone wrong – and watch our talented cast bring the Roaring Twenties to life before your very eyes! This ain't your grandmother's theatre (unless your
+          grandmother was a 1920s party girl) – it's completely unscripted, utterly unpredictable, and absolutely unforgettable!
         </p>
+        <p>Show starts at 7:33pm sharp! Tickets are $5 for students, $10 for adults and available for purchase at lunch or at the door.</p>
       </div>
     </div>
     <ShowLineup />
   </section>
-</StandardLayout>
-<style>
-  .mainImage {
-    text-align: center;
-  }
-  .showAnnouncement {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    padding: 1em 0;
-  }
-  .announcement {
-    text-align: center;
-    margin-left: 1em;
-  }
-  .showTitle {
-    font-size: var(--h2);
-    font-style: var(--headingFont);
-  }
-  .showDate {
-    font-size: var(--h4);
-  }
-  .showInfo {
-    padding: 1em 0;
-  }
-  @media screen and (min-width: 870px) {
-    .showAnnouncement {
-      grid-template-columns: auto 1fr;
-      padding: 2em 0;
+  <style>
+    .mainImage {
+      text-align: center;
     }
-  }
-</style>
+    .showAnnouncement {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1em 0;
+    }
+    .announcement {
+      text-align: center;
+      margin-left: 1em;
+    }
+    .showTitle {
+      font-size: var(--h2);
+      font-style: var(--headingFont);
+    }
+    .showDate {
+      font-size: var(--h4);
+    }
+    .showInfo {
+      padding: 1em 0;
+    }
+    @media screen and (min-width: 870px) {
+      .showAnnouncement {
+        padding: 2em 0;
+      }
+    }
+  </style>
+</StandardLayout>
