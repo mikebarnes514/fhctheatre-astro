@@ -4,44 +4,44 @@ import Tickets from '../pages/tickets.astro';
 const shows = [
   {
     title: 'Improv Central Fall Edition',
-    dates: 'November 2 @ 7:03 PM',
+    dates: 'September 27 @ 7:33 PM',
     location: 'FHC Auditorium',
-    image: '/images/improv-fall-2024-logo.png',
+    image: '/images/improv-central-logo.jpg',
     link: '/improv',
   },
   {
-    title: 'Alice in Wonderland',
-    dates: 'November 14 - 16 @ 7:00 PM, November 16 @ 3:00 PM',
+    title: 'The Crucible',
+    dates: 'November 13 - 15 @ 7:00 PM',
     location: 'FHC Auditorium',
-    image: '/images/alice-logo.png',
+    image: '/images/crucible-logo.jpg',
     link: '/play',
   },
   {
-    title: 'Random Acts of Talent 25',
-    dates: ' January 18 @ 7:00 PM',
+    title: 'Random Acts of Talent 26',
+    dates: ' TBA',
     location: 'FH Fine Arts Center',
-    image: '/images/rat-2025-logo.jpg',
+    image: '/images/show-rat-new.jpg',
     link: '/rat',
   },
   {
-    title: 'Peter Pan',
-    dates: 'March 20 - 22 @ 7:00 PM; March 22 @ 3:00 PM',
+    title: 'Something Rotten',
+    dates: 'March 19 - 21 @ 7:00 PM; March 21 @ 3:00 PM',
     location: 'FHC Fine Arts Center',
-    image: '/images/musical-2025-logo.jpg',
+    image: '/images/something-rotten-logo.jpg',
     link: '/musical',
   },
   {
     title: 'Improv Central Spring Edition',
     dates: 'April 27 @ 7:33 PM',
     location: 'FHC Auditorium',
-    image: '/images/improv-spring-square.jpg',
+    image: '/images/improv-central-logo.jpg',
     link: '/improv',
   },
 ];
 ---
 
 <section class="showLineup">
-  <h3>2024 Show Lineup</h3>
+  <h3>2025-26 Show Lineup</h3>
   <div class="showList">
     {
       shows.map((show) => (
@@ -92,6 +92,7 @@ const shows = [
       font-weight: 600;
       color: var(--black);
       align-content: end;
+      justify-self: center;
     }
     .showDates,
     .showLocation {
@@ -140,6 +141,7 @@ const shows = [
         display: grid;
         grid-template-columns: auto 1fr;
       }
+      .showName,
       .showDates,
       .showLocation {
         align-content: start;
