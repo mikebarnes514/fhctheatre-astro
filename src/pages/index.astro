@@ -9,7 +9,7 @@ import StandardLayout from '../layouts/StandardLayout.astro';
     <h2 class="center">Welcome to the Home of FHC Theatre</h2>
     <div class="showAnnouncement">
       <div class="mainImage" class="center">
-        <img src="/images/crucible-logo.jpg" alt="FHC Theatre Presents Arthur Miller's The Crucible" width="300" />
+        <img src="/images/crucible/crucible-poster.jpg" alt="FHC Theatre Presents Arthur Miller's The Crucible" />
       </div>
       <div class="announcement">
         <h3 class="showTitle">FHC Theatre Presents Arthur Miller's The Crucible</h3>
@@ -21,7 +21,7 @@ import StandardLayout from '../layouts/StandardLayout.astro';
           Puritan New England. Witness the struggle between individual conscience and social pressure in one of American theatre's greatest plays. A story of moral courage that will leave you
           questioning: What would you do when everything you hold dear is at stake?
         </p>
-        <p>Show starts at 7:00pm. Tickets are $10 for students, $8 for adults and available for purchase at lunch or at the door.</p>
+        <p>Show starts at 7:00pm. Tickets are $8 for students, $10 for adults and available for purchase at lunch or at the door.</p>
       </div>
     </div>
     <ShowLineup />
@@ -38,7 +38,7 @@ import StandardLayout from '../layouts/StandardLayout.astro';
     }
     .announcement {
       text-align: center;
-      margin-left: 1em;
+      margin-left: 2em;
     }
     .showTitle {
       font-size: var(--h2);
@@ -52,7 +52,12 @@ import StandardLayout from '../layouts/StandardLayout.astro';
     }
     @media screen and (min-width: 870px) {
       .showAnnouncement {
+        flex-direction: row;
         padding: 2em 0;
+      }
+      .mainImage img {
+        width: 400px;
+        max-width: 400px;
       }
     }
   </style>
