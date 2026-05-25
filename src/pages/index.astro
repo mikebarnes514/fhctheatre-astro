@@ -9,15 +9,26 @@ import StandardLayout from '../layouts/StandardLayout.astro';
     <h2 class="center">Welcome to the Home of FHC Theatre</h2>
     <div class="showAnnouncement">
       <div class="mainImage" class="center">
-        <img src="/images/2026-Improv-Spring-Poster.png" alt="FHC Theatre Presents Improv Central: Spring Edition — Gotham Nights" />
+        <img src="/images/2026-musical-kickline.jpg" alt="The kickline scene from Something Rotten" />
       </div>
       <div class="announcement">
-        <h3 class="showTitle">FHC Theatre Presents Improv Central: Spring Edition — Gotham Nights</h3>
-        <p class="showDate">Saturday, May 2, 2026 @ 7:33 PM<br />FHC Auditorium</p>
-        <p class="showInfo">
-          This spring, Improv Central turns the auditorium into Gotham for one night: capes optional, chaos guaranteed. The show is still 100% improvised—nothing rehearsed, everything invented in the moment—with sketches spun from the audience and a Batman-inspired twist. If you like big characters, bigger laughs, and plots that didn't exist five minutes ago, this is your night.
-        </p>
-        <p>Show starts at 7:33pm. Tickets are $10 for adults and $5 for students. They will be available for purchase at lunch or at the door.</p>
+        <!-- <h3 class="showTitle">FHC Theatre Presents Improv Central: Spring Edition — Gotham Nights</h3>
+        <p class="showDate">Saturday, May 2, 2026 @ 7:33 PM<br />FHC Auditorium</p> -->
+        <div class="showInfo">
+          <p>
+            Welcome to Forest Hills Central Theatre—home to improv nights, the fall play, Random Acts of Talent, the
+            spring musical, and a community of students who build something memorable together every year.
+          </p>
+          <p>
+            Our 2025–26 season has wrapped, and we're enjoying a well-earned summer break. Use the links below to
+            revisit this year's shows, find forms and sponsorship info, or browse photos from recent productions.
+          </p>
+          <p>
+            New audition and performance dates will be posted here as soon as they're set—usually as we head back to
+            school in the fall.
+          </p>
+        </div>
+        <!-- <p>Show starts at 7:33pm. Tickets are $10 for adults and $5 for students. They will be available for purchase at lunch or at the door.</p> -->
       </div>
     </div>
     <ShowLineup />
@@ -45,6 +56,9 @@ import StandardLayout from '../layouts/StandardLayout.astro';
     }
     .showInfo {
       padding: 1em 0;
+    }
+    .showInfo p + p {
+      margin-top: 1em;
     }
     @media screen and (min-width: 870px) {
       .showAnnouncement {
